@@ -52,3 +52,11 @@ a{
 	text-decoration: none;
 	color: #000;
 }
+.holder {
+	padding: 0 15.625%;
+	box-sizing: border-box;
+}
+.title-wrap{
+	font-size: 60px;
+	font-weight: bold;
+}

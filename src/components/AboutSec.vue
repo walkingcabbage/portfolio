@@ -9,7 +9,6 @@
               짜릿함을 느끼고,<br>
               새로운 것을 창조하는<br>
               모든 일을 즐깁니다.</p>
-
           </div>
         </div>
         <div class="right">
@@ -119,21 +118,22 @@
   </div>
 </template>
 <script>
-  import {
-    onMounted
-    ,ref
-  } from "vue";
+  import {onMounted,ref} from "vue";
   import AOS from 'aos';
   import 'aos/dist/aos.css';
+
+  
+
   export default {
     setup() {
       const txt=ref(null);
-      onMounted(() => {
+
+      onMounted(()=>{
         AOS.init();
-        console.log(txt);
+        
       })
       return{
-        txt
+        txt,
       }
     }
 
@@ -149,10 +149,7 @@
     z-index: 0;
   }
 
-  .holder {
-    padding: 0 15.625%;
-    box-sizing: border-box;
-  }
+
 
   .wrap {
     position: relative;
