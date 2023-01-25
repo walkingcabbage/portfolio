@@ -13,7 +13,6 @@
   </div>
 </template>
 <script>
-import Scrollbar from 'smooth-scrollbar';
 export default {
   setup() {
   },
@@ -23,7 +22,7 @@ export default {
       e.preventDefault();
       const sec=document.getElementById(e.target.dataset.target);
       if(sec){
-        Scrollbar.init
+        sec.scrollIntoView({behavior:'smooth'});
       }
     },
   },

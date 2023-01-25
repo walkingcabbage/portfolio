@@ -1,19 +1,25 @@
 <template>
-  <div class="wrap" ref="wrap">
-    <h1>project sec</h1>
+  <div class="wrap" >
+    <div class="project-swiper-wrap">
+      <project-con/>
+    </div>
   </div>
 </template>
 <script>
-import { onMounted, ref } from "vue";
+import { onMounted } from "vue";
+
+import ProjectCon from './ProjectCon.vue';
 export default {
+  components: {
+  ProjectCon
+  },
   setup() {
-    const wrap=ref(null)
+    ProjectCon
     
     onMounted(()=>{
       
     })
     return{
-      wrap
     }
   }
 }
@@ -21,7 +27,8 @@ export default {
 <style scoped>
     div{
     width: 100%;
-    height: 800px;
-    background-color: lightgreen;
+    height: 100vh;
+    min-height: 720px;
+    background-color: #000;
   }
 </style>

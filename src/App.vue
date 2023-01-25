@@ -22,7 +22,6 @@ import Skills from './components/SkillsSec.vue'
 import Project from './components/ProjectSec.vue'
 import Contact from './components/ContactSec.vue'
 
-import Scrollbar from 'smooth-scrollbar';
 import { onMounted } from '@vue/runtime-core'
 
 export default {
@@ -38,7 +37,6 @@ export default {
   },
   setup() {
     onMounted(()=>{
-      Scrollbar.init(document.querySelector('#smooth-bar'));
     }
     )
     return{

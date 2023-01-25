@@ -54,7 +54,8 @@ export default {
 <style scoped>
     div.wrap{
     width: 100%;
-    height: 800px;
+    height: 100vh;
+    min-height: 720px;
     background-color: #fff;
   }
   .holder{
