@@ -5,39 +5,67 @@
           <div class="title-wrap">
             <h2>PROJECT</h2>
           </div>
+          <div class="title-wrap clone">
+            <h2>WEBCLONE</h2>
+          </div>
           <div class="site-logo-wrap">
-            <img class="site-logo" src="../assets/imgs/KWAlogo.png" alt="">
+            <img class="site-logo" :src="logoUrl" alt="">
+            <!-- ../assets/imgs/KWAlogo.png -->
           </div>
         </div>
         <div class="project-right">
           <div class="project-right-top">
-            <span class="pagenation"></span>
+            <span class="pagenation">{{current}}/{{total}}</span>
             <div class="project-title">
-              <h3>한국 폐기물 협회</h3>
+              <h3>{{title}}</h3>
             </div>
           </div>
           <div class="project-right-bottom">
-            <p>한국 폐기물협회 웹사이트의 리뉴얼을 진행했습니다. 
-디자인에도 문제가 많고, 테이블을 사용하여 웹 사이트가 만들어진 것, 
-반응형이 적용이 안 된 것을 보고 구조적으로도 문제가 많다고 생각했습니다. </p>
-            <h4>개발기간</h4>
-            <p>2022 11월 초 ~ 12월 중순</p>
-            <h4>직무</h4>
-            <p>1인 개발</p>
-            <h4>기여도</h4>
-            <p>100% / 디자인, 마크업, 동적요소, 서버 구축, 데이터베이스 연결</p>
-            <h4>스택</h4>
-            <p>HTML, CSS, Javascript, Node.js, express.js, ejs, MySQL</p>
-            <h4>Github</h4>
-            <a href="https://github.com/walkingcabbage/KWA2">https://github.com/walkingcabbage/KWA2</a>
+            <p class="disc">{{disc}}</p>
+            <div class="details">
+              <h4>개발기간</h4>
+              <p>{{devtime}}</p>
+            </div>
+            <div class="details">
+              <h4>직무</h4>
+            <p>{{job}}</p>
+            </div>
+            <div class="details">
+              <h4>기여도</h4>
+            <p>{{contr}}</p>
+            </div>
+            <div class="details">
+              <h4>스택</h4>
+            <p>{{stack}}</p>
+            </div>
+            <div class="details">
+              <h4>Github</h4>
+            <a :href='githubUrl'>{{ githubUrl }}</a>
+            </div>
           </div>
         </div>
       </div>
   </div>
 </template>
 <script>
+import { onMounted } from "vue";
 export default {
-  
+  props:{
+    logoUrl:String,
+    title:String,
+    disc:String,
+    devtime:String,
+    job:String,
+    contr:String,
+    stack:String,
+    githubUrl:String,
+    total:Number,
+    current:Number,
+  },
+  setup(){
+    onMounted(()=>{
+    })
+  }
 }
 </script>
 <style scoped>
@@ -48,15 +76,75 @@ export default {
   }
   .project-sec{
     display: flex;
+    height: 100%;
+    width: 100%;
   }
   .project-left{
     width: 45%;
+    border-right: 1px solid #fff;
   }
   .project-right{
     width: 55%;
+    border-right: 1px solid #fff;
+  }
+  .project-right-top{
+    position: relative;
+    border-bottom: 1px solid #fff;
   }
   .title-wrap{
     padding-left: 15.625%;
     padding-top: 100px;
+  }
+  .project-title{
+    font-size: 48px;
+    font-weight: bold;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .pagenation{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .project-right-bottom{
+    padding: 70px 15.625%;
+    /* height: 100%; */
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  .site-logo-wrap{
+    text-align: center;
+    padding-top: 200px;
+  }
+  .site-logo{
+    width: 60%;
+  }
+  .disc{
+    margin-bottom: 40px;
+    line-height: 20px;
+  }
+  .details{
+    margin-bottom: 20px;
+  }
+  .details>h4{
+    color: #FF9128;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .details>a{
+    color: #fff;
+    text-decoration: underline;
+  }
+  .swiper-slide:nth-child(4) .title-wrap,.swiper-slide:nth-child(5) .title-wrap{
+    display: none;
+  }
+  .clone{
+    display: none;
+    padding-left: 15.625%;
+    padding-top: 100px;
+  }
+  .swiper-slide:nth-child(4) .clone,.swiper-slide:nth-child(5) .clone{
+    display: block;
   }
 </style>

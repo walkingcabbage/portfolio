@@ -1,5 +1,5 @@
 <template>
-<div id="smooth-bar">
+<div class="whole-wrap">
 
 <Header/>
 <Intro id="Intro"/>
@@ -50,8 +50,7 @@ export default {
   margin: 0;
   padding: 0;
 }
-#smooth-bar{
-  width: 100vw;
-  height: 100vh;
+whole-wrap{
+  overflow-x: hidden;
 }
 </style>
