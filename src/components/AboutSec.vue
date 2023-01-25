@@ -156,7 +156,7 @@
   }
 
   .about-me-txt {
-    padding-top: 150px;
+    padding-top: 100px;
   }
 
   .about-me-txt h2 {

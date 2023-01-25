@@ -86,11 +86,6 @@
 
     setup() {
       onMounted(() => {
-        const arr = document.querySelectorAll('#minwoos path');
-        for (let i = 0; i < arr.length; i++) {
-          console.log(arr[i].getTotalLength());
-
-        }
       })
     },
 

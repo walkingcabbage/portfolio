@@ -1,8 +1,10 @@
 <template>
-<div>
+<div id="smooth-bar">
+
 <Header/>
 <Intro id="Intro"/>
 <About id="About"/>
+<!-- <h1>{{scrollbar}}</h1> -->
 <Edu id="Edu"/>
 <Skills id="Skills"/>
 <Project id="Project"/>
@@ -20,6 +22,9 @@ import Skills from './components/SkillsSec.vue'
 import Project from './components/ProjectSec.vue'
 import Contact from './components/ContactSec.vue'
 
+import Scrollbar from 'smooth-scrollbar';
+import { onMounted } from '@vue/runtime-core'
+
 export default {
   name: 'App',
   components: {
@@ -30,6 +35,14 @@ export default {
     Skills,
     Project,
     Contact
+  },
+  setup() {
+    onMounted(()=>{
+      Scrollbar.init(document.querySelector('#smooth-bar'));
+    }
+    )
+    return{
+      }
   }
 }
 </script>
@@ -38,5 +51,9 @@ export default {
 *{
   margin: 0;
   padding: 0;
+}
+#smooth-bar{
+  width: 100vw;
+  height: 100vh;
 }
 </style>

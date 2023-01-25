@@ -13,14 +13,17 @@
   </div>
 </template>
 <script>
+import Scrollbar from 'smooth-scrollbar';
 export default {
+  setup() {
+  },
   methods: {
     goSection(e){
       if(!e.target.matches('.gotosec')) return;
       e.preventDefault();
       const sec=document.getElementById(e.target.dataset.target);
       if(sec){
-        sec.scrollIntoView({behavior:'smooth'});
+        Scrollbar.init
       }
     },
   },

@@ -5,16 +5,20 @@
         <h1>EDUCATION</h1>
       </div>
       <div class="content-wrap">
-        <swiper :slides-per-view="4" :space-between="50" @swiper="onSwiper" @slideChange="onSlideChange">
-          <swiper-slide>Slide 1</swiper-slide>
-          <swiper-slide>Slide 2</swiper-slide>
-          <swiper-slide>Slide 3</swiper-slide>
-          <swiper-slide>Slide 1</swiper-slide>
-          <swiper-slide>Slide 2</swiper-slide>
-          <swiper-slide>Slide 3</swiper-slide>
-          <swiper-slide>Slide 1</swiper-slide>
-          <swiper-slide>Slide 2</swiper-slide>
-          <swiper-slide>Slide 3</swiper-slide>
+        <swiper  :slides-per-view="'auto'" :space-between="20" :freeMode="true" :modules="modules"  @swiper="onSwiper" @slideChange="onSlideChange">
+          <swiper-slide v-for="item in edus" :key="item">
+            <div class="inner-slide">
+              <div class="year-wrap">
+                <h2 class="year-con">{{item.year}}</h2>
+              </div>
+              <ul class="edus-wrap">
+                <li class="edu-con" v-for="detail in item.edu" :key="detail">
+                  <h3 class="edu-month">{{item.year}}.{{detail.month}}</h3>
+                  <p class="edu-details">{{detail.details}}</p>
+                </li>
+              </ul>
+            </div>
+          </swiper-slide>
         </swiper>
       </div>
     </div>
@@ -28,22 +32,61 @@
     SwiperSlide
   } from 'swiper/vue';
   import 'swiper/css';
-
+  import "swiper/css/free-mode";
+import { FreeMode } from "swiper";
   export default {
     components: {
       Swiper,
       SwiperSlide,
     },
     setup() {
-      const onSwiper = (swiper) => {
-        console.log(swiper);
+      const onSwiper = () => {
       };
       const onSlideChange = () => {
-        console.log('slide change');
       };
+
+      const edus=[
+        {
+          year:'2017',
+          edu:[{
+            month:'02',
+            details:'심석고등학교 졸업'
+          },{
+            month:'03',
+            details:'서일대학교 컴퓨터응용전자과 입학'
+          }]
+        },{
+          year:'2020',
+          edu:[{
+            month:'03',
+            details:'서일대학교 소프트웨어 공학과로 전과'
+          }]
+        },
+        {
+          year:'2022',
+          edu:[{
+            month:'02',
+            details:'서일대학교 소프트웨어 공학과 졸업'
+          },
+          {
+            month:'06',
+            details:'정보처리산업기사 자격증 취득'
+          }]
+        },{
+           year:'2023',
+           edu:[{
+            month:'02',
+            details:`노원 그린컴퓨터 아카데미 
+[디지털컨버전스] 뷰(Vue) 활용프론트엔드
+웹개발자 양성과정 수료(900시간)`
+           }]
+        }
+      ]
       return {
         onSwiper,
         onSlideChange,
+        modules: [FreeMode],
+        edus
       }
     }
   }
@@ -53,17 +96,55 @@
     width: 100%;
     height: 100vh;
     min-height: 720px;
-    background-color: #FFF;
+    background-color: #000;
     position: relative;
+  }
+  .holder{
+    height: 100%;
   }
 
   .title-wrap {
     color: #fff;
     position: relative;
-    padding-top: 137px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+  }
+  .content-wrap{
+    height: 50%;
   }
   .swiper{
     width: 100%;
-    height: 300px;
+    height: 100%
+  }
+  .swiper-slide{
+    width: 350px;
+  }
+  .inner-slide{
+    height: 100%;
+    background-color: #fff;
+    padding: 43px 36px;
+        box-sizing: border-box;
+  }
+  .year-wrap{
+    margin-bottom: 27px;
+  }
+  .year-con{
+    font-size: 60px;
+    font-weight: bold;
+    color: #FF9128;
+  }
+  .edu-con{
+    margin-bottom: 21px;
+  }
+  .edu-month{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 7px;
+  }
+  .edu-details{
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 16px;
+        line-height: 20px;
   }
 </style>
