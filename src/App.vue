@@ -50,7 +50,7 @@ export default {
   margin: 0;
   padding: 0;
 }
-whole-wrap{
+.whole-wrap{
   overflow-x: hidden;
 }
 </style>

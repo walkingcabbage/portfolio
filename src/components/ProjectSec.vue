@@ -1,7 +1,10 @@
 <template>
   <div class="wrap" >
     <div class="project-swiper-wrap">
-      <swiper  :slides-per-view="1"     @swiper="onSwiper" @slideChange="onSlideChange">
+      <swiper :navigation="{
+        nextEl: '.next-btn',
+    prevEl: '.prev-btn',
+      }"  :slides-per-view="1" :loop="true" :modules="modules"   @swiper="onSwiper" @slideChange="onSlideChange">
         <swiper-slide v-for="(item,index) in projectDetails">
           <project-con 
           :logoUrl='item.logo'
@@ -15,6 +18,12 @@
 :total="projectDetails.length"
 :current="index+1"/>
           </swiper-slide>
+          <div  class="prev-btn">
+            <font-awesome-icon icon="fa-solid fa-arrow-left" />
+          </div>
+          <div class="next-btn">
+            <font-awesome-icon icon="fa-solid fa-arrow-right" />
+          </div>
       </swiper>
       
     </div>
@@ -27,9 +36,11 @@ import ProjectCon from './ProjectCon.vue';
 
 import {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
   } from 'swiper/vue';
+  import { Navigation } from "swiper";
   import 'swiper/css';
+  import 'swiper/css/navigation'
 export default {
   components: {
   ProjectCon,
@@ -41,7 +52,6 @@ export default {
       };
       const onSlideChange = () => {
       };
-
       const projectDetails=[
         {
           logo:require(`@/assets/imgs/KWAlogo.png`),
@@ -109,16 +119,48 @@ swiper 라이브러리를 사용할 수 있는 경험이 되었습니다.`,
     return{
       onSwiper,
       onSlideChange,
-      projectDetails
+      projectDetails,
+      modules: [Navigation],
     }
   }
 }
 </script>
 <style scoped>
-    div{
+    div.wrap{
     width: 100%;
     height: 100vh;
     min-height: 720px;
     background-color: #000;
+  }
+  .project-swiper-wrap{
+    height: 100%;
+  }
+  .swiper{
+    height: 100%;
+  }
+  .prev-btn{
+    z-index: 3;
+    position: absolute;
+    color: #fff;
+    font-size: 60px;
+    top: 50%;
+    left: 1%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: font-size 0.3s;
+  }
+  .prev-btn:hover,.next-btn:hover{
+    font-size: 70px;
+  }
+  .next-btn{
+    z-index: 3;
+    position: absolute;
+    color: #fff;
+    font-size: 60px;
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: font-size 0.3s;
   }
 </style>
