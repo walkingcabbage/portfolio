@@ -177,8 +177,8 @@
     bottom: 0;
     margin-left: 32px;
     margin-bottom: 32px;
-    opacity: 0;
-    -webkit-opacity: 0;
+    filter:opacity(0);
+    -webkit-filter:opacity(0);
     animation: txtbox1-anime 1s ease forwards 2.1s;
     -webkit-animation: txtbox1-anime 1s ease forwards 2.1s;
       -webkit-user-select:none;
@@ -199,8 +199,8 @@
     right: 0;
     margin-bottom: 46px;
     margin-right: 19px;
-    opacity: 0;
-    -webkit-opacity:0;
+    filter:opacity(0);
+    -webkit-filter:opacity(0);
         animation: txtbox2-anime 1s ease forwards 2.3s;
         -webkit-animation: txtbox2-anime 1s ease forwards 2.3s;
           -webkit-user-select:none;
@@ -299,8 +299,8 @@
         animation: line-anime 1.5s ease forwards 0.4s;
   }
   .po{
-    -webkit-opacity:0;
-opacity: 0;
+    filter:opacity(0);
+    -webkit-filter:opacity(0);
 animation: title-anime 1s ease forwards 1.9s;
 -webkit-animation: title-anime 1s ease forwards 1.9s;
   -webkit-user-select:none;
@@ -323,20 +323,20 @@ animation: title-anime 1s ease forwards 1.9s;
   }
   @keyframes title-anime {
     to{
-      -webkit-opacity:1;
-      opacity: 1;
+      filter:opacity(1);
+    -webkit-filter:opacity(1);
     }
   }
   @keyframes txtbox1-anime {
     to{
-      -webkit-opacity:1;
-      opacity: 1;
+      filter:opacity(1);
+    -webkit-filter:opacity(1);
     }
   }
   @keyframes txtbox2-anime {
     to{
-      -webkit-opacity:1;
-      opacity: 1;
+      filter:opacity(1);
+    -webkit-filter:opacity(1);
     }
   }
 
