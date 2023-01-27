@@ -50,6 +50,9 @@
 </svg>
 
       </div>
+      <div class="svg-wrap mt">
+
+      </div>
       <div class="copyright">
         <p>©2023 LEEMINWOO. All Rights Reserved.</p>
       </div>
@@ -64,8 +67,8 @@ export default {
 <style scoped>
   div.wrapper{
     width: 100%;
-    height: 100vh;
-    min-height: 720px;
+    height: 70vh;
+    min-height: 600px;
     background-color: #fff;
     overflow: hidden;
   }
@@ -104,4 +107,69 @@ export default {
     bottom: 10px;
     right: 10px;
   }
+  .svg-wrap.mt{
+    display: none;
+  }
+  @media (max-width:1400px) {
+    .contact-right>div{
+      margin-top: 30px;
+    }
+    .contact-left{
+      width: 30%;
+      max-width: 210px;
+    }
+    .contact-left>img{
+      width: 100%;
+    }
+    .svg-wrap{
+          display: none;
+        }
+        .svg-wrap.mt{
+          display: block;
+          position: absolute;
+          bottom: -60px;
+          background-image: url('@/assets/imgs/THANKYOU.png');
+          background-repeat: no-repeat;
+          /* background-size: cover; */
+          background-position: center;
+          width: 100%;
+          height: 183px;
+          left: -10%;
+        }
+  }
+      @media (max-width:768px) {
+        .holder{
+          height: 100%;
+        }
+        .title-wrap{
+          padding: 50px 0;
+        }
+        .con-wrap{
+          flex-direction: column;
+          align-items: center;
+        }
+        .contact-right>div{
+          font-size: 14px;
+        }
+        .contact-right>div>h3{
+          font-size: 16px;
+        }
+        .contact-right{
+          width: 100%;
+        }
+        .github{
+          overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+        }
+        .svg-wrap.mt{
+          bottom: 32px;
+          background-size: cover;
+          height: 33px;
+          left: 31px;
+        }
+        .copyright{
+          font-size: 12px;
+        }
+      }
 </style>

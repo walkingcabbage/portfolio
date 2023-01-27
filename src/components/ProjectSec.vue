@@ -122,7 +122,7 @@ swiper 라이브러리를 사용할 수 있는 경험이 되었습니다.`,
 <style scoped>
   div.wrap {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     min-height: 900px;
     max-height: 1000px;
     background-color: #000;

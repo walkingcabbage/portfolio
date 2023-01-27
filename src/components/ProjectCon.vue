@@ -125,7 +125,13 @@ export default {
   }
   .details{
     margin-bottom: 20px;
+
   }
+    .details:last-child{
+    overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
   .details>h4{
     color: #FF9128;
     font-size: 20px;
@@ -146,6 +152,9 @@ export default {
   }
   .swiper-slide:nth-child(4) .clone,.swiper-slide:nth-child(5) .clone{
     display: block;
+  }
+  .details>p,.details>a{
+    line-height: 20px;
   }
   @media (max-width:1400px) {
     .project-sec{
@@ -178,6 +187,7 @@ export default {
     }
     .site-logo{
       width: 30%;
+      min-width: 165px;
     }
     .project-title{
       padding-bottom: 0;
@@ -196,6 +206,31 @@ export default {
     }
   }
   @media (max-width:768px) {
-    
+    .site-logo-wrap{
+      text-align: center;
+      padding-left: 0;
+    }
+    .title-wrap{
+      padding-left: 0;
+      padding-top: 70px;
+    }
+    .project-left{
+      padding-bottom: 120px;
+    }
+    .project-right-top{
+    }
+
+    .project-title{
+      padding: 0;
+      text-align: center;
+      padding-top: 255px;
+      font-size: 20px;
+    }
+    .project-right-bottom{
+      font-size: 14px;
+    }
+    .details>h4{
+      font-size: 16px;
+    }
   }
 </style>

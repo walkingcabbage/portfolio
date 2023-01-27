@@ -43,17 +43,17 @@ export default {
 
       const offsetY=window.pageYOffset;
 
-      if (offsetY>=introSec.offsetTop) {
+      if (Math.round(offsetY)>=Math.round(introSec.offsetTop))  {
         changer(0,navItemTxt,navItem);
-        if (offsetY>=aboutSec.offsetTop) {
+        if (Math.round(offsetY)>=Math.round(aboutSec.offsetTop)) {
           changer(1,navItemTxt,navItem);
-          if (offsetY>=eduSec.offsetTop) {
+          if (Math.round(offsetY)>=Math.round(eduSec.offsetTop)) {
             changer(2,navItemTxt,navItem);
-            if (offsetY>=skillsSec.offsetTop) {
+            if (Math.round(offsetY)>=Math.round(skillsSec.offsetTop)) {
               changer(3,navItemTxt,navItem);
-              if (offsetY>=projectSec.offsetTop) {
+              if (Math.round(offsetY)>=Math.round(projectSec.offsetTop)) {
                 changer(4,navItemTxt,navItem);
-                if (offsetY>=contactSec.offsetTop) {
+                if (Math.round(offsetY)>=Math.round(contactSec.offsetTop)) {
                   changer(5,navItemTxt,navItem);
           
         }
