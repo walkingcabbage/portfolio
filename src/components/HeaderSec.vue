@@ -95,6 +95,7 @@ div.header-wrap{
   mix-blend-mode: difference;
   box-sizing: border-box;
     backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 ul{
   display: flex;
