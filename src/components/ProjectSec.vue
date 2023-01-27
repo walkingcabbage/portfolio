@@ -4,7 +4,7 @@
       <swiper :navigation="{
         nextEl: '.next-btn',
     prevEl: '.prev-btn',
-      }" :slides-per-view="1" :loop="true" :modules="modules" @swiper="onSwiper" @slideChange="onSlideChange">
+      }" :slides-per-view="1" :modules="modules" @swiper="onSwiper" @slideChange="onSlideChange">
         <swiper-slide v-for="(item,index) in projectDetails" :key="item">
           <project-con :logoUrl='item.logo' :title="item.tit" :disc="item.dis" :devtime="item.devt" :job="item.jobs"
             :contr="item.cont" :stack="item.stak" :githubUrl="item.github" :total="projectDetails.length"
@@ -123,7 +123,8 @@ swiper 라이브러리를 사용할 수 있는 경험이 되었습니다.`,
   div.wrap {
     width: 100%;
     height: 100vh;
-    min-height: 720px;
+    min-height: 900px;
+    max-height: 1000px;
     background-color: #000;
   }
 
@@ -162,5 +163,14 @@ swiper 라이브러리를 사용할 수 있는 경험이 되었습니다.`,
     transform: translateY(-50%);
     cursor: pointer;
     transition: font-size 0.3s;
+  }
+  @media (max-width:1400px) {
+    .prev-btn,.next-btn{
+      font-size: 36px;
+    }
+    .prev-btn:hover,
+  .next-btn:hover {
+    font-size: 40px;
+  }
   }
 </style>

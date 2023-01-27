@@ -94,7 +94,7 @@ import { FreeMode } from "swiper";
 <style scoped>
   div.wrap {
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     min-height: 720px;
     background-color: #000;
     position: relative;
@@ -146,5 +146,37 @@ import { FreeMode } from "swiper";
         font-family: 'Noto Sans KR', sans-serif;
         font-size: 16px;
         line-height: 20px;
+  }
+  @media (max-width:1400px) {
+    .title-wrap{
+      padding: 100px 0;
+    }
+    .content-wrap{
+    height: 50%;
+  }
+  .swiper-slide{
+    width: 300px;
+  }
+  .year-con{
+    font-size: 40px;
+  }
+  }
+  @media (max-width:768px) {
+    .title-wrap{
+      font-size: 24px;
+      text-align: center;
+    }
+    .swiper-slide{
+    width: 250px;
+  }
+    .year-con{
+      font-size: 24px;
+    }
+    .edu-month{
+      font-size: 16px;
+    }
+    .edu-month{
+      font-size: 14px;
+    }
   }
 </style>

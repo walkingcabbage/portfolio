@@ -86,12 +86,15 @@ export default {
 </script>
 <style scoped>
 div.header-wrap{
+  width: 100%;
+    
   position: fixed;
   z-index: 2;
   color: #fff;
-  margin-top: 24px;
-  margin-left: 16px;
+  padding: 13px 16px;
   mix-blend-mode: difference;
+  box-sizing: border-box;
+    backdrop-filter: blur(2px);
 }
 ul{
   display: flex;
@@ -124,5 +127,22 @@ li>span>div.on{
 }
 li:hover span>div{
 width: 100%;
+}
+
+@media (max-width:1400px) {
+  li{
+    padding: 0 25px;
+    font-size: 16px;
+  }
+
+}
+@media (max-width:768px) {
+  ul{
+    flex-wrap: wrap;
+  }
+  li{
+    padding: 0 14px;
+    font-size: 14px;
+  }
 }
 </style>

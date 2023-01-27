@@ -54,7 +54,7 @@ export default {
 <style scoped>
     div.wrap{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     min-height: 720px;
     background-color: #fff;
   }
@@ -87,11 +87,10 @@ border: 0;
     }
   .skills-icons>img{
     height: 80%;
-    filter: grayscale(1);
-    transition: filter 0.3s;
+    transition: transform 0.3s;
   }
   .skills-icons>img:hover{
-    filter: grayscale(0);
+    transform: scale(1.05);
   }
   .skills-icons>img:first-child{
     margin-left: 30px;
@@ -102,5 +101,27 @@ margin-right: 10px;
   .skills-icons>img:nth-child(2){
     margin-right: 30px;
   }
+@media (max-width:1400px) {
+  .title-wrap{
+    padding: 100px 0;
+  }
+  .skills-row{
+    height: 80px;
+  }
+  .skills-icons{
+    width: 65%;
+  }
+  .skills-icons>img{
 
+  }
+
+}
+@media (max-width:768px) {
+  .skills-row{
+    flex-direction: column;
+  }
+  .skills-icons>img{
+    height: 50%;
+  }
+}
 </style>

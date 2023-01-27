@@ -147,4 +147,55 @@ export default {
   .swiper-slide:nth-child(4) .clone,.swiper-slide:nth-child(5) .clone{
     display: block;
   }
+  @media (max-width:1400px) {
+    .project-sec{
+      flex-direction: column;
+      border-right: 1px solid #fff;
+    }
+    .title-wrap{
+      padding-left: 10%;
+    }
+    .project-left{
+      width: 100%;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #fff;
+      border-right: 0;
+    }
+    .project-right{
+      width: 100%;
+    }
+    .site-logo-wrap{
+      padding-top: 50px;
+      padding-left: 10%;
+      text-align: left;
+    }
+    .project-right-top{
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 0;
+      width: 100%;
+    }
+    .site-logo{
+      width: 30%;
+    }
+    .project-title{
+      padding-bottom: 0;
+      padding-top: 210px;
+      padding-right: 10%;
+      font-size: 36px;
+      text-align: right;
+      box-sizing: border-box;
+    }
+    .project-right{
+      border: 0;
+      word-break: keep-all;
+    }
+    .project-right-bottom{
+      padding: 40px 10%;
+    }
+  }
+  @media (max-width:768px) {
+    
+  }
 </style>

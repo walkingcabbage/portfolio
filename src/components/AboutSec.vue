@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <div class="back-txt">
+    <div class="back-txt bp">
       <svg width="1026" height="434" viewBox="0 0 1026 434" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask id="path-1-outside-1_115_2" maskUnits="userSpaceOnUse" x="0" y="0.599976" width="1078" height="434"
           fill="black">
@@ -113,6 +113,8 @@
           d="M1003.5 394V285.6H1039.7V317.2L1034.3 308.2C1037.5 300.067 1042.7 294 1049.9 290C1057.1 285.867 1065.83 283.8 1076.1 283.8V318C1074.36 317.733 1072.83 317.6 1071.5 317.6C1070.3 317.467 1068.96 317.4 1067.5 317.4C1059.76 317.4 1053.5 319.533 1048.7 323.8C1043.9 327.933 1041.5 334.733 1041.5 344.2V394H1003.5Z"
           stroke="#FF9128" stroke-width="2" mask="url(#path-1-outside-1_115_2)" />
       </svg>
+    </div>
+    <div class="back-txt bmt">
 
     </div>
   </div>
@@ -143,16 +145,19 @@
   .wrapper {
     width: 100%;
     height: 100vh;
-    min-height: 720px;
+    min-height: 800px;
     background-color: #fff;
     position: relative;
     z-index: 0;
   }
 
-
+.holder{
+  height: 100%;
+}
 
   .wrap {
     position: relative;
+    height: 100%;
   }
 
   .about-me-txt {
@@ -205,5 +210,80 @@
     display: inline-block;
     right: 0;
     bottom: -90px;
+  }
+  .bmt{
+    display: none;
+  }
+  @media (max-width:1400px) {
+    .about-me-imgs>img{
+      position: absolute;
+      width: 200px;
+    }
+    .right{
+      width: 100%;
+      top: 30%;
+      right: 50%;
+    transform: translateX(50%);
+    max-width: 600px;
+    z-index: 2;
+    }
+    .about-me-imgs>img:nth-child(1){
+      left: 0;
+    }
+    .about-me-imgs>img:nth-child(2){
+      left: calc(50% - 100px)
+    }
+    .about-me-imgs>img:nth-child(3){
+      right: 0;
+    }
+    .about-me-txt h2{
+      font-size: 36px;
+    }
+    .back-txt{
+      bottom: -61px;
+    }
+    .bp{
+      display: none;
+    }
+    .bmt{
+      display: block;
+      width: 820px;
+      height: 366px;
+      background-image: url(@/assets/imgs/Front-end\ Developer.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  @media (max-width:768px){
+    .about-me-imgs>img{
+      width: 45%;
+      min-width: 140px;
+    }
+    .right{
+      width: 100%;
+      top: 35%;
+      right: 50%;
+    transform: translateX(50%);
+    max-width: 500px;
+    z-index: 2;
+    }
+    .about-me-imgs>img:nth-child(2){
+      left: 25%
+    }
+    .about-me-txt{
+      text-align: center;
+    }
+    .about-me-txt h2{
+      font-size: 24px;
+    }
+    .about-me-txt p{
+      font-size: 14px;
+      margin-top: 16px;
+    }
+    .bmt{
+      width: 100%;
+      height: 30%;
+      background-position: center;
+    }
   }
 </style>

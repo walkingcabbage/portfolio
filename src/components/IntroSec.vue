@@ -178,7 +178,7 @@
     margin-left: 32px;
     margin-bottom: 32px;
     opacity: 0;
-    animation: txtbox1-anime 1s ease forwards 4.2s;
+    animation: txtbox1-anime 1s ease forwards 2.1s;
       -webkit-user-select:none;
   -moz-user-select:none;
   -ms-user-select:none;
@@ -198,7 +198,7 @@
     margin-bottom: 46px;
     margin-right: 19px;
     opacity: 0;
-        animation: txtbox2-anime 1s ease forwards 4.3s;
+        animation: txtbox2-anime 1s ease forwards 2.3s;
           -webkit-user-select:none;
   -moz-user-select:none;
   -ms-user-select:none;
@@ -250,53 +250,53 @@
   .minwoos path:nth-child(2) {
     stroke-dasharray: 517.9642944335938;
     stroke-dashoffset: 517.9642944335938;
-    animation: line-anime 2s ease forwards;
+    animation: line-anime 1s ease forwards;
   }
 
   .minwoos path:nth-child(3) {
         stroke-dasharray: 172.40020751953125;
     stroke-dashoffset: 172.40020751953125;
-        animation: line-anime 2s ease forwards 0.3s;
+        animation: line-anime 1.5s ease forwards 0.2s;
   }
 
   .minwoos path:nth-child(4) {
         stroke-dasharray: 442;
     stroke-dashoffset: 442;
-        animation: line-anime 2s ease forwards 0.6s;
+        animation: line-anime 1.5s ease forwards 0.6s;
   }
 
   .minwoos path:nth-child(5) {
         stroke-dasharray: 625;
     stroke-dashoffset: 625;
-        animation: line-anime 2s ease forwards 0.9s;
+        animation: line-anime 1.5s ease forwards 0.4s;
   }
 
   .minwoos path:nth-child(6) {
         stroke-dasharray: 376;
     stroke-dashoffset: 376;
-        animation: line-anime 2s ease forwards 1.2s;
+        animation: line-anime 1.5s ease forwards 0.2s;
   }
 
   .minwoos path:nth-child(7) {
         stroke-dasharray: 376;
     stroke-dashoffset: 376;
-    animation: line-anime 2s ease forwards 1.5s;
+    animation: line-anime 1.5s ease forwards 0.6s;
   }
 
   .minwoos path:nth-child(8) {
         stroke-dasharray: 115;
     stroke-dashoffset: 115;
-    animation: line-anime 2s ease forwards 1.8s;
+    animation: line-anime 1.5s ease forwards 0.2s;
   }
 
   .minwoos path:nth-child(9) {
     stroke-dasharray: 285;
     stroke-dashoffset: 285;
-        animation: line-anime 2s ease forwards 2.1s;
+        animation: line-anime 1.5s ease forwards 0.4s;
   }
   .po{
 opacity: 0;
-animation: title-anime 1s ease forwards 4s;
+animation: title-anime 1s ease forwards 1.9s;
   -webkit-user-select:none;
   -moz-user-select:none;
   -ms-user-select:none;
@@ -366,6 +366,13 @@ animation: title-anime 1s ease forwards 4s;
       margin: 0;
       left: 10%;
       top: 30%;
+      animation: txtbox1-anime-3622a816 1s ease forwards 1.9s;
+    }
+    .po{
+      animation: title-anime-3622a816 1s ease forwards 1.7s;
+    }
+    .rb-txtbox{
+      animation: txtbox2-anime-3622a816 1s ease forwards 2.1s;
     }
   }
   @media (max-width:768px){
@@ -392,7 +399,20 @@ animation: title-anime 1s ease forwards 4s;
       
     }
     .rb-txtbox{
-font-size: 14px;
+font-size: 12px;
+    }
+    .gh,.em{
+      display: block;
+      margin-bottom: 10px;
+    }
+    .po{
+      animation: title-anime-3622a816 1s ease forwards 1.3s;
+    }
+    .rt-txtbox{
+      animation: txtbox1-anime-3622a816 1s ease forwards 1.5s;
+    }
+    .rb-txtbox{
+      animation: txtbox2-anime-3622a816 1s ease forwards 1.7s;
     }
   }
 
