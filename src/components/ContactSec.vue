@@ -67,7 +67,7 @@ export default {
 <style scoped>
   div.wrapper{
     width: 100%;
-    height: 70vh;
+    height: 100vh;
     min-height: 600px;
     background-color: #fff;
     overflow: hidden;
