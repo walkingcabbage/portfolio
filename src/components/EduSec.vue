@@ -6,7 +6,7 @@
       </div>
       <div class="content-wrap">
         <swiper  :slides-per-view="'auto'" :space-between="20" :freeMode="true" :modules="modules"  @swiper="onSwiper" @slideChange="onSlideChange">
-          <swiper-slide v-for="item in edus" :key="item">
+          <swiper-slide v-for="item in edus.slice().reverse()" :key="item">
             <div class="inner-slide">
               <div class="year-wrap">
                 <h2 class="year-con">{{item.year}}</h2>
