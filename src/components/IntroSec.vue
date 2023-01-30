@@ -178,9 +178,7 @@
     margin-left: 32px;
     margin-bottom: 32px;
     filter:opacity(0);
-    /* -webkit-filter:opacity(0); */
     animation: txtbox1-anime 1s ease forwards 2.1s;
-    /* -webkit-animation: txtbox1-anime 1s ease forwards 2.1s; */
       -webkit-user-select:none;
   -moz-user-select:none;
   -ms-user-select:none;
@@ -200,9 +198,7 @@
     margin-bottom: 46px;
     margin-right: 19px;
     filter:opacity(0);
-    /* -webkit-filter:opacity(0); */
         animation: txtbox2-anime 1s ease forwards 2.3s;
-        /* -webkit-animation: txtbox2-anime 1s ease forwards 2.3s; */
           -webkit-user-select:none;
   -moz-user-select:none;
   -ms-user-select:none;
@@ -300,9 +296,7 @@
   }
   .po{
     filter:opacity(0);
-    /* -webkit-filter:opacity(0); */
 animation: title-anime 1s ease forwards 1.9s;
-/* -webkit-animation: title-anime 1s ease forwards 1.9s; */
   -webkit-user-select:none;
   -moz-user-select:none;
   -ms-user-select:none;
@@ -324,19 +318,16 @@ animation: title-anime 1s ease forwards 1.9s;
   @keyframes title-anime {
     to{
       filter:opacity(1);
-    /* -webkit-filter:opacity(1); */
     }
   }
   @keyframes txtbox1-anime {
     to{
       filter:opacity(1);
-    /* -webkit-filter:opacity(1); */
     }
   }
   @keyframes txtbox2-anime {
     to{
       filter:opacity(1);
-    /* -webkit-filter:opacity(1); */
     }
   }
 
