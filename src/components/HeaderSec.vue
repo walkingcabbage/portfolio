@@ -142,6 +142,7 @@ width: 100%;
     flex-wrap: wrap;
   }
   li{
+    width: 21.5%;
     padding: 0 14px;
     font-size: 14px;
   }

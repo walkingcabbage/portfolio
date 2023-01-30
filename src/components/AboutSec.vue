@@ -5,9 +5,9 @@
         <div class="left">
           <div ref="txt" class="about-me-txt">
             <h2>LEE<br>MINWOO</h2>
-            <p>지식을 수집하는 것에<br>
+            <p>지식을 수집하는 것에<br class="m_hide">
               짜릿함을 느끼고,<br>
-              새로운 것을 창조하는<br>
+              새로운 것을 창조하는<br class="m_hide">
               모든 일을 즐깁니다.</p>
           </div>
         </div>
@@ -214,6 +214,7 @@
   .bmt{
     display: none;
   }
+  
   @media (max-width:1400px) {
     .about-me-imgs>img{
       position: absolute;
@@ -259,6 +260,9 @@
       width: 45%;
       min-width: 140px;
     }
+    .m_hide{
+    display: none;
+  }
     .right{
       width: 100%;
       top: 35%;
