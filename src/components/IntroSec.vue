@@ -377,12 +377,15 @@ animation: title-anime 1s ease forwards 1.9s;
       left: 10%;
       top: 30%;
       animation: txtbox1-anime-3622a816 1s ease forwards 1.9s;
+      -webkit-animation: txtbox1-anime-3622a816 1s ease forwards 1.9s;
     }
     .po{
       animation: title-anime-3622a816 1s ease forwards 1.7s;
+      -webkit-animation: title-anime-3622a816 1s ease forwards 1.7s;
     }
     .rb-txtbox{
       animation: txtbox2-anime-3622a816 1s ease forwards 2.1s;
+      -webkit-animation: txtbox2-anime-3622a816 1s ease forwards 2.1s;
     }
   }
   @media (max-width:768px){
@@ -417,12 +420,15 @@ font-size: 12px;
     }
     .po{
       animation: title-anime-3622a816 1s ease forwards 1.3s;
+      -webkit-animation: title-anime-3622a816 1s ease forwards 1.3s;
     }
     .rt-txtbox{
       animation: txtbox1-anime-3622a816 1s ease forwards 1.5s;
+      -webkit-animation: txtbox1-anime-3622a816 1s ease forwards 1.5s;
     }
     .rb-txtbox{
       animation: txtbox2-anime-3622a816 1s ease forwards 1.7s;
+      -webkit-animation: txtbox2-anime-3622a816 1s ease forwards 1.7s;
     }
   }
 
