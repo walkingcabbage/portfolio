@@ -7,7 +7,7 @@
       }" :slides-per-view="1" :modules="modules" @swiper="onSwiper" @slideChange="onSlideChange">
         <swiper-slide v-for="(item,index) in projectDetails" :key="item">
           <project-con :logoUrl='item.logo' :title="item.tit" :disc="item.dis" :devtime="item.devt" :job="item.jobs"
-            :contr="item.cont" :stack="item.stak" :githubUrl="item.github" :total="projectDetails.length"
+            :contr="item.cont" :stack="item.stak" :githubUrl="item.github" :demoUrl="item.demo" :total="projectDetails.length" 
             :current="index+1" />
         </swiper-slide>
         <div class="prev-btn">
@@ -56,18 +56,20 @@
           jobs: '1인 개발',
           cont: '100% / 디자인, 마크업, 동적요소, 서버 구축, 데이터베이스 연결',
           stak: 'HTML, CSS, Javascript, Node.js, express.js, ejs, MySQL',
-          github: 'https://github.com/walkingcabbage/KWA2'
+          github: 'https://github.com/walkingcabbage/KWA2',
+          demo: ''
         },
         {
           logo: require(`@/assets/imgs/seomunlogo.png`),
           tit: '서문시장 야시장',
           dis: `서문시장 야시장 웹사이트의 리뉴얼을 진행하였습니다.
-매우 번잡한 콘텐츠 배치와 반응형 미지원을 고치는 데에 중점으로 하였습니다. `,
+매우 번잡한 콘텐츠 배치와 반응형 미지원을 고치는 데에 중점을 두었습니다. `,
           devt: '2022 10월 초 ~ 11월 초 ',
           jobs: '1인 개발',
           cont: '100% / 디자인, 마크업, 동적요소, 서버 구축, 데이터베이스 연결',
           stak: 'HTML, CSS, Javascript, Node.js, express.js, ejs, MySQL',
-          github: '준비중'
+          github: '준비중',
+          demo: ''
         },
         {
           logo: require(`@/assets/imgs/wonjulogo.png`),
@@ -79,7 +81,8 @@
           jobs: '팀 프로젝트 / PM, 디자인, 퍼블리싱',
           cont: '50% / 메인페이지 마크업, 서브페이지 마크업, 동적요소, 서버구축, 데이터베이스 연결',
           stak: 'HTML, CSS, Javascript, Node.js, express.js, ejs, MySQL, git',
-          github: 'https://github.com/walkingcabbage/wonju'
+          github: 'https://github.com/walkingcabbage/wonju',
+          demo: ''
         },
         {
           logo: require(`@/assets/imgs/richmondlogo.png`),
@@ -90,7 +93,8 @@
           jobs: '1인 개발',
           cont: '100% / 디자인, 마크업, 동적요소',
           stak: 'HTML, CSS, Javascript',
-          github: '준비중'
+          github: 'https://github.com/walkingcabbage/therichmond_clone',
+          demo: 'https://walkingcabbage.github.io/therichmond_clone/'
         },
         {
           logo: require(`@/assets/imgs/shouselogo.png`),
@@ -102,7 +106,8 @@ swiper 라이브러리를 사용할 수 있는 경험이 되었습니다.`,
           jobs: '1인 개발',
           cont: '100% / 디자인, 마크업, 동적요소',
           stak: 'HTML, CSS, Javascript',
-          github: '준비중'
+          github: 'https://github.com/walkingcabbage/shouse_clone',
+          demo: 'https://walkingcabbage.github.io/shouse_clone/'
         },
 
       ]
