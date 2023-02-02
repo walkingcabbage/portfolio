@@ -39,9 +39,8 @@
             <p>{{stack}}</p>
             </div>
             <div class="details">
-              <h4>기타</h4>
-            <a target="_blank" :href='githubUrl'>Github</a>
-            <a v-if="demoUrl" target="_blank" :href='demoUrl'>Demo</a>
+              <h4>Github</h4>
+            <a :href='githubUrl'>{{ githubUrl }}</a>
             </div>
           </div>
         </div>
@@ -60,7 +59,6 @@ export default {
     contr:String,
     stack:String,
     githubUrl:String,
-    demoUrl:String,
     total:Number,
     current:Number,
   },
@@ -129,9 +127,6 @@ export default {
     margin-bottom: 20px;
 
   }
-  .details>a:nth-child(3){
-    padding-left: 10px;
-  }
     .details:last-child{
     overflow:hidden;
       text-overflow:ellipsis;
@@ -164,7 +159,7 @@ export default {
   @media (max-width:1400px) {
     .project-sec{
       flex-direction: column;
-      border-right: 0px solid #fff;
+      border-right: 1px solid #fff;
     }
     .title-wrap{
       padding-left: 10%;
