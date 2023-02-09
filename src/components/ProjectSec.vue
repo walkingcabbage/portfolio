@@ -57,7 +57,7 @@
           cont: '100% / 디자인, 마크업, 동적요소, 서버 구축, 데이터베이스 연결',
           stak: 'HTML, CSS, Javascript, Node.js, express.js, ejs, MySQL',
           github: 'https://github.com/walkingcabbage/KWA2',
-          demo: ''
+          demo: 'https://kwa-walkingcabbage.koyeb.app/'
         },
         {
           logo: require(`@/assets/imgs/seomunlogo.png`),
@@ -68,8 +68,8 @@
           jobs: '1인 개발',
           cont: '100% / 디자인, 마크업, 동적요소, 서버 구축, 데이터베이스 연결',
           stak: 'HTML, CSS, Javascript, Node.js, express.js, ejs, MySQL',
-          github: '준비중',
-          demo: ''
+          github: 'https://github.com/walkingcabbage/seomun',
+          demo: 'https://seomun-walkingcabbage.koyeb.app/'
         },
         {
           logo: require(`@/assets/imgs/wonjulogo.png`),
@@ -82,7 +82,7 @@
           cont: '50% / 메인페이지 마크업, 서브페이지 마크업, 동적요소, 서버구축, 데이터베이스 연결',
           stak: 'HTML, CSS, Javascript, Node.js, express.js, ejs, MySQL, git',
           github: 'https://github.com/walkingcabbage/wonju',
-          demo: ''
+          demo: 'https://wonju-walkingcabbage.koyeb.app/'
         },
         {
           logo: require(`@/assets/imgs/richmondlogo.png`),
