@@ -31,4 +31,3 @@
 > 4. 기기 width값에 따라 padding, font-size값 조정, flex-wrap을 이용하여 공간 절약에 신경썼다
 
 ## INTRO
-d
