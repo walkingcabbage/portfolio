@@ -16,8 +16,8 @@
               <p>aksdn1513@gmail.com</p>
             </div>
             <div class="katalk">
-              <h3>Kakaotalk</h3>
-              <p>dlalsdn1111</p>
+              <h3>Phone</h3>
+              <p>010-6343-1174</p>
             </div>
             <div class="github">
               <h3>Github</h3>

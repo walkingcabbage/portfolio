@@ -13,6 +13,7 @@
               <img src="../assets/imgs/htmllogo.png" alt="">
               <img src="../assets/imgs/csslogo.png" alt="">
               <img src="../assets/imgs/jslogo.png" alt="">
+              <img src="../assets/imgs/Typescript_logo_2020.png" alt="">
             </div>
           </li>
           <li class="skills-row">
@@ -34,10 +35,11 @@
           </li>
           <li class="skills-row">
             <div class="skills-tit">
-              <p>Framework</p>
+              <p>Framework & Library</p>
             </div>
             <div class="skills-icons">
               <img src="../assets/imgs/vuelogo.png" alt="">
+              <img src="../assets/imgs/React-icon.png" alt="">
             </div>
           </li>
         </ul>
@@ -101,6 +103,9 @@ margin-right: 10px;
   .skills-icons>img:nth-child(2){
     margin-right: 30px;
   }
+  .dbox{
+    position: absolute;
+  }
 @media (max-width:1400px) {
   .title-wrap{
     padding: 100px 0;
@@ -141,7 +146,9 @@ margin-right: 10px;
   }
   .skills-icon{
   }
-  
+  .skills-icons>img:nth-child(2){
+    margin-right: 10px;
+  }
 }
 @media (max-width:480px){
   .title-wrap{

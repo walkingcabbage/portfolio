@@ -7,24 +7,37 @@
       <div class=" project-wrap renewal-project-wrap">
         <h2>renewal</h2>
         <div class="renewal-con">
-          <project-con/>  
-          <project-con/>  
-          <project-con/>  
+          <project-con v-for="(item) in projectDetails" :key="item" 
+          :logo="item.logo"
+          :title="item.tit"
+          :stak="item.stak"
+          :github="item.github"
+          :demo="item.demo"
+          :mockup="item.mockup"/>
         </div>
       </div>
       <div class=" project-wrap clone-wrap">
         <h2>web clone</h2>
         <div class="renewal-con">
-          <project-con/>  
-          <project-con/>  
+          <project-con v-for="(item) in cloneDetails" :key="item" 
+          :logo="item.logo"
+          :title="item.tit"
+          :stak="item.stak"
+          :github="item.github"
+          :demo="item.demo"
+          :mockup="item.mockup"/>
         </div>
       </div>
       <div class=" project-wrap toy-project-wrap">
         <h2>toy project</h2>
         <div class="renewal-con">
-          <project-con/>  
-          <project-con/>  
-          <project-con/>  
+           <project-con v-for="(item) in toyDetails" :key="item" 
+          :logo="item.logo"
+          :title="item.tit"
+          :stak="item.stak"
+          :github="item.github"
+          :demo="item.demo"
+          :mockup="item.mockup"/>
         </div>
       </div>
 
@@ -35,9 +48,8 @@
 import ProjectCon from './ProjectCon.vue';
 export default {
   components: { ProjectCon },
-  
-}
-const projectDetails = [{
+ setup(){
+   const projectDetails = [{
           logo: require(`@/assets/imgs/kwa-tit.png`),
           tit: '한국 폐기물 협회',
           stak: 'HTML, CSS, Javascript, Node.js, express.js, ejs, MySQL',
@@ -56,7 +68,7 @@ const projectDetails = [{
         {
           logo: require(`@/assets/imgs/wonju-tit.png`),
           tit: '원주 곤충마을 박물관',
-          stak: 'HTML, CSS, Javascript, Node.js, express.js, ejs, MySQL, git',
+          stak: 'HTML, CSS, Javascript, Node.js, express.js, ejs, MySQL',
           github: 'https://github.com/walkingcabbage/wonju',
           demo: 'https://wonju-walkingcabbage.koyeb.app/',
           mockup: true,
@@ -109,8 +121,15 @@ const toyDetails = [
           demo: 'https://walkingcabbage.github.io/how-many-days/',
           mockup: false,
         },
-
       ]
+      return{
+        projectDetails,
+        cloneDetails,
+        toyDetails,
+      }
+ }
+}
+
 </script>
 
 <style lang="css">
