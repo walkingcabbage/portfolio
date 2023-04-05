@@ -23,8 +23,13 @@
               <h3>Github</h3>
               <a href="https://github.com/walkingcabbage">https://github.com/walkingcabbage</a>
             </div>
+            <div class="btn-wrap">
+            <a href="files/lee.pdf" download="이민우 이력서.pdf" class="download-btn">이력서<img src="@/assets/imgs/iconmonstr-download-19-32.png" alt=""></a>
+            <a href="files/producelee.pdf" download="이민우 자기소개서.pdf" class="download-btn">자기소개서<img src="@/assets/imgs/iconmonstr-download-19-32.png" alt=""></a>
+            </div>
           </div>
         </div>
+        
       </div>
 
       <div class="copyright">
@@ -35,7 +40,11 @@
 </template>
 <script>
 export default {
-  
+  setup(){
+   
+    return{
+    }
+  },
 }
 </script>
 <style scoped>
@@ -60,7 +69,7 @@ export default {
   }
 
   .contact-right>div{
-    margin-top: 55px;
+    margin-top: 40px;
   }
   .contact-right>div>h3{
     font-weight: bold;
@@ -83,6 +92,26 @@ export default {
   }
   .svg-wrap.mt{
     display: none;
+  }
+  .btn-wrap{
+    display: flex;
+    justify-content: space-around;
+  }
+  .download-btn{
+    border: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none !important;
+    
+  }
+  .download-btn > img{
+    margin-left: 5px;
+    height: 16px;
   }
   @media (max-width:1400px) {
     .contact-right>div{
@@ -121,6 +150,7 @@ export default {
         .con-wrap{
           flex-direction: column;
           align-items: center;
+          margin: 0 auto;
           margin-top: 10%;
         }
         .contact-right>div{
@@ -144,6 +174,9 @@ export default {
           left: 31px;
         }
         .copyright{
+          font-size: 12px;
+        }
+        .download-btn{
           font-size: 12px;
         }
       }
